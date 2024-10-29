@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -49,12 +50,10 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        Vector3 dir = transform.forward * _inputVector.y +
-            transform.right * _inputVector.x;
+        Vector3 dir = (transform.forward * _inputVector.y +
+            transform.right * _inputVector.x) * moveSpeed;
 
-        dir *= moveSpeed;
         dir.y = _rigidbody.velocity.y;
-        // 점프외에는 현재 상태 0
 
         _rigidbody.velocity = dir;
     }
