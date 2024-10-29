@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{
+{ // Enemy도 아이템처럼 Type을 나눠놓으면 좋겠다
     [Header("Combat")]
     public int damage;
     public float damageRate;

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5572480027110590408}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,6 +37,7 @@ Transform:
   - {fileID: 7074341061942674030}
   - {fileID: 7617324283813305753}
   - {fileID: 5587647569184946875}
+  - {fileID: 1069759419374936379}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2513406408331314262
@@ -51,7 +52,7 @@ GameObject:
   - component: {fileID: 8758813664183746572}
   - component: {fileID: 2591383617714685503}
   - component: {fileID: 4596517715301071255}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Proto_Terrain_Mound_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,8 +68,8 @@ Transform:
   m_GameObject: {fileID: 2513406408331314262}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.1392937, y: -0.19745636, z: -53.887836}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalPosition: {x: 7.1392937, y: -1, z: -53.887836}
+  m_LocalScale: {x: 10, y: 3, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5572480027110590408}
@@ -157,7 +158,7 @@ GameObject:
   - component: {fileID: 1432486544980444097}
   - component: {fileID: 8459065035994210037}
   - component: {fileID: 1193628742583553756}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Proto_Terrain_Mound_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +264,7 @@ GameObject:
   - component: {fileID: 8847483613167829583}
   - component: {fileID: 6093109214855357569}
   - component: {fileID: 7454002232437128722}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Proto_Metal_Plate_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 3514341957573054377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.1392937, y: -0.19745636, z: -53.887836}
+  m_LocalPosition: {x: 7.1392937, y: -1.5, z: -53.887836}
   m_LocalScale: {x: 120, y: 0, z: 180}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -358,6 +359,112 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2253069934453255931, guid: 3635b88beb8908142ab32fc762900037, type: 3}
+--- !u!1 &3892649724296131177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069759419374936379}
+  - component: {fileID: 4008902068425749911}
+  - component: {fileID: 2715222347328054433}
+  - component: {fileID: 7957716764349417899}
+  m_Layer: 0
+  m_Name: Proto_Block_Platform_Square_02_Atlased
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1069759419374936379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3892649724296131177}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.1392937, y: -1.6974564, z: -53.887836}
+  m_LocalScale: {x: 120, y: 1, z: 180}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5572480027110590408}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4008902068425749911
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3892649724296131177}
+  m_Mesh: {fileID: 5842999001287765067, guid: e5ac01d8f370be945a6d1bff654fef6d, type: 3}
+--- !u!23 &2715222347328054433
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3892649724296131177}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e1e8014e4b037c6459c0a996af519884, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7957716764349417899
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3892649724296131177}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5842999001287765067, guid: e5ac01d8f370be945a6d1bff654fef6d, type: 3}
 --- !u!1 &4156825868335101259
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +477,7 @@ GameObject:
   - component: {fileID: 5166120016340428184}
   - component: {fileID: 8677982224741628257}
   - component: {fileID: 5399042222883865067}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Proto_Terrain_Mound_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +582,7 @@ GameObject:
   - component: {fileID: 4753739481383362386}
   - component: {fileID: 158822727858817838}
   - component: {fileID: 8093636125351116347}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Proto_Water_Static_Plane_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +599,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7.1392937, y: -0.19745636, z: -53.887836}
-  m_LocalScale: {x: 20, y: 1, z: 30}
+  m_LocalScale: {x: 20, y: 3, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5572480027110590408}
@@ -559,7 +666,7 @@ GameObject:
   - component: {fileID: 9136321675723570888}
   - component: {fileID: 4267741229349574690}
   - component: {fileID: 5452526418441909856}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Proto_Terrain_Mountain_Capped_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +773,7 @@ GameObject:
   - component: {fileID: 7489421897234233785}
   - component: {fileID: 4041715338511461800}
   - component: {fileID: 2513990190239021398}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Proto_Terrain_Mountain_Capped_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +880,7 @@ GameObject:
   - component: {fileID: 2965564212966820742}
   - component: {fileID: 1665700719420466048}
   - component: {fileID: 3782033412624479723}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Proto_Terrain_Mound_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
