@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Look")]
     public Transform cameraContainer;
-    public float minLook;
-    public float maxLook;
+    public float minXLook;
+    public float maxXLook;
     private float camCurXPot;
     public float lookSensitivity; // 민감도
     private Vector2 mouseDelta;
@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponentInChildren<Animator>();
+    }
+
+    private void Update()
+    {
+        Debug.DrawRay(transform.position + (transform.up * 0.01f), Vector3.down * 1f, Color.red);
     }
 
     private void FixedUpdate()
@@ -59,7 +64,7 @@ public class PlayerController : MonoBehaviour
         camCurXPot += mouseDelta.y * lookSensitivity;
         //돌려줄 값을 마우스 델타.y에서 뽑아오고
         //x방향을 돌리기 위해선 y축을 돌리고 y방향을 돌릴땐 반대로 x축을 돌리고
-        camCurXPot = Mathf.Clamp(camCurXPot, minLook, maxLook);
+        camCurXPot = Mathf.Clamp(camCurXPot, minXLook, maxXLook);
         // 최소값, 최대값을 넘지않게 Mathf.Clamp 사용
         cameraContainer.localEulerAngles = new Vector3(-camCurXPot, 0, 0);
         // -를 해야 위를 바라보고 +를 해야 아래를 보기 때문에 
@@ -88,6 +93,27 @@ public class PlayerController : MonoBehaviour
     { // InputSystem에서 값 받아오기
         mouseDelta = inContext.ReadValue<Vector2>();
         // 마우스 Vector2 받아오기
+    }
+
+    public void OnJump(InputAction.CallbackContext inContext)
+    {
+        if (inContext.phase == InputActionPhase.Started && IsJump())
+        { // 키보드를 눌렀을 때 점프 가능한 상태라면
+            _rigidbody.AddForce(Vector2.up * jumpPower, ForceMode.Impulse);
+            // 위로 발사
+        }
+    }
+
+    bool IsJump()
+    {
+        Ray ray = new Ray(transform.position + (transform.up * 0.01f), Vector3.down);
+
+        if (Physics.Raycast(ray, 1f, groundLayerMask))
+        {
+            return true;
+        }
+
+        return false;
     }
 
     void ToggleCursor()
