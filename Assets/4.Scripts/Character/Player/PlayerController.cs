@@ -121,4 +121,15 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
         canLock = !toggle;
     }
+
+    private void OnCollisionEnter(Collision inCollision)
+    {
+        if(inCollision.gameObject.TryGetComponent<Enemy>(out var outEnemy))
+        {
+            if(outEnemy.enemyType == EnemyType.JumpPad)
+            {
+                _rigidbody.AddForce(Vector2.up * jumpPower * 2, ForceMode.Impulse);
+            }
+        }
+    }
 }

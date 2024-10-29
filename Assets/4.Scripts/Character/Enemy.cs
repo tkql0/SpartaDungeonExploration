@@ -2,11 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyType
+{
+    Monster,
+    Trap,
+    JumpPad,
+}
+
 public class Enemy : MonoBehaviour
 { // Enemy도 아이템처럼 Type을 나눠놓으면 좋겠다
     [Header("Combat")]
     public int damage;
     public float damageRate;
+
+    public EnemyType enemyType;
 
     List<IDamageIbe> things = new List<IDamageIbe>();
 
@@ -21,6 +30,11 @@ public class Enemy : MonoBehaviour
         {
             things[i].TakePhysicalDamage(damage);
         }
+    }
+
+    public virtual void Attack()
+    {
+
     }
 
     private void OnTriggerEnter(Collider inOther)
