@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -2467,13 +2467,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slots: []
-  inventoryWindow: {fileID: 669932361}
+  inventroyWindow: {fileID: 669932361}
   slotPanel: {fileID: 158303150}
   dropPosition: {fileID: 0}
   selectedItemName: {fileID: 1217208149}
   selectedItemDescription: {fileID: 1196037245}
-  selectedItemStatName: {fileID: 343156906}
-  selectedItemStatValue: {fileID: 584790673}
+  selectedStatName: {fileID: 0}
+  selectedStatValue: {fileID: 0}
   useButton: {fileID: 722766746}
   dropButton: {fileID: 15126507}
 --- !u!1 &698171102
@@ -3091,7 +3091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -3245,7 +3245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -3533,7 +3533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -3687,7 +3687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -3922,7 +3922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -4913,7 +4913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -5102,7 +5102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -5390,7 +5390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -6084,7 +6084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -6238,7 +6238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -6794,7 +6794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -7023,7 +7023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}
@@ -7568,7 +7568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventory: {fileID: 0}
+  inventroy: {fileID: 0}
   button: {fileID: 0}
   icon: {fileID: 0}
   quatityText: {fileID: 0}

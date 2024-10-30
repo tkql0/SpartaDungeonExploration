@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool canLock = true;
 
-    public Action inventory;
+    public Action inventroy;
 
     private Rigidbody _rigidbody;
     private Animator _animator;
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         Vector3 dir = (transform.forward * _inputVector.y +
-            transform.right * _inputVector.x) * moveSpeed;
+            transform.right * _inputVector.x);
 
         dir *= CharacterManager.Instance.Player.condition.isDoping
             ? moveSpeed : moveSpeed * 2;
@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
     {
         if (callbackContext.phase == InputActionPhase.Started)
         { // 특정 키(i)를 눌럿는가
-            inventory?.Invoke();
+            inventroy?.Invoke();
             ToggleCursor();
             // 비활성화 중이던 커서 활성화
         }

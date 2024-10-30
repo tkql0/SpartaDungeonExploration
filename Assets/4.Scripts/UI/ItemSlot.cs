@@ -8,7 +8,7 @@ public class ItemSlot : MonoBehaviour
 {
     public ItemData item;
 
-    public UIInventory inventory;
+    public UIInventory inventroy;
     public Button button;
     public Image icon;
     public TextMeshProUGUI quatityText;
@@ -32,6 +32,6 @@ public class ItemSlot : MonoBehaviour
 
     public void OnClickButton()
     {
-        inventory.SelectItem(index);
+        inventroy.SelectItem(index);
     }
 }
