@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,10 @@ public class PlayerController : MonoBehaviour
     private float camCurXPot;
     public float lookSensitivity; // 민감도
     private Vector2 mouseDelta;
+    [HideInInspector]
     public bool canLock = true;
+
+    public Action inventory;
 
     private Rigidbody _rigidbody;
     private Animator _animator;
@@ -52,6 +56,9 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 dir = (transform.forward * _inputVector.y +
             transform.right * _inputVector.x) * moveSpeed;
+
+        dir *= CharacterManager.Instance.Player.condition.isDoping
+            ? moveSpeed : moveSpeed * 2;
 
         dir.y = _rigidbody.velocity.y;
 
@@ -115,6 +122,16 @@ public class PlayerController : MonoBehaviour
         return false;
     }
 
+    public void OnInventoryButton(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.phase == InputActionPhase.Started)
+        { // 특정 키(i)를 눌럿는가
+            inventory?.Invoke();
+            ToggleCursor();
+            // 비활성화 중이던 커서 활성화
+        }
+    }
+
     void ToggleCursor()
     {
         bool toggle = Cursor.lockState == CursorLockMode.Locked;
@@ -129,6 +146,8 @@ public class PlayerController : MonoBehaviour
             if(outEnemy.enemyType == EnemyType.JumpPad)
             {
                 _rigidbody.AddForce(Vector2.up * jumpPower * 2, ForceMode.Impulse);
+                // 해당 기능을 점프 패드에 넣고 함수를 불러 오는걸로 바꿔야겠다
+                // 매개변수로 리지드 바디 넣으면 작동 할듯
             }
         }
     }

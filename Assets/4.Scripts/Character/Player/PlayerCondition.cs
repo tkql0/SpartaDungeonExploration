@@ -13,6 +13,8 @@ public class PlayerCondition : MonoBehaviour, IDamageIbe
 {
     public UICondition uICondition;
 
+    public bool isDoping;
+
     Condition health { get { return uICondition.health; } }
     // 함수 순서랑
 
@@ -25,11 +27,25 @@ public class PlayerCondition : MonoBehaviour, IDamageIbe
         // 체력을 채우고
     }
 
+    public void Eat(float inAmout)
+    {
+        StartCoroutine(Doping(inAmout));
+    }
+
     public void TakePhysicalDamage(int inDamage)
     {
         health.Subtract(inDamage);
         // 데미지를 빼고
         OnTakeDamage?.Invoke();
         // 화면 빨갛게 물들이기
+    }
+
+    IEnumerator Doping(float inAmout)
+    {
+        isDoping = true;
+
+        yield return new WaitForSeconds(inAmout);
+
+        isDoping = false;
     }
 }
